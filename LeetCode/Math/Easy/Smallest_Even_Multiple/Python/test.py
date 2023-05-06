@@ -8,16 +8,18 @@ def base_test(tests=None, expects=None, is_verbose=True):
 
     if tests is None:
         tests = [
-            "",
+            5,
+            6,
         ]
 
     if expects is None:
         expects = [
-            "",
+            10,
+            6,
         ]
 
     for test, expected, counter in zip(tests, expects, range(1, len(tests)+1)):
-        result = _.test_function(test)
+        result = _.smallestEvenMultiple(test)
         assert result == expected, f"Test #{counter} failed.\n"\
             f"\tExpected: {expects}\n"\
             f"\tReceived: {test}\n"
