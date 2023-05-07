@@ -20,7 +20,7 @@ def base_test(tests=None, expects=None, is_verbose=True):
         result = _.test_function(test)
         assert result == expected, f"Test #{counter} failed.\n"\
             f"\tExpected: {expects}\n"\
-            f"\tReceived: {test}\n"
+            f"\tReceived: {result}\n"
         print("Test #{} passed.{}".format(
             counter, f"\n\tTest case: {test}" if is_verbose else ""))
 
