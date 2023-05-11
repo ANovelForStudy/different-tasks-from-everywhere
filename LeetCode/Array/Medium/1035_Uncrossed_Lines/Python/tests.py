@@ -9,15 +9,15 @@ def base_test(tests=None, expects=None, is_verbose=True):
     if tests is None:
         tests = [
             [[1, 4, 2], [1, 2, 4]],
-            # [[2, 5, 1, 2, 5], [10, 5, 2, 1, 5, 2]],
-            # [[1, 3, 7, 1, 7, 5], [1, 9, 2, 5, 1]]
+            [[2, 5, 1, 2, 5], [10, 5, 2, 1, 5, 2]],
+            [[1, 3, 7, 1, 7, 5], [1, 9, 2, 5, 1]]
         ]
 
     if expects is None:
         expects = [
             2,
-            # 3,
-            # 2,
+            3,
+            2,
         ]
 
     for test, expected, counter in zip(tests, expects, range(1, len(tests)+1)):

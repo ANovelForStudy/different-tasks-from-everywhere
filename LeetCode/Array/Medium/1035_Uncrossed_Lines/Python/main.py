@@ -9,7 +9,6 @@ class Solution:
 
         for i in range(1, n):
             for j in range(1, m):
-                print(dp)
                 if nums1[i-1] == nums2[j-1]:
                     dp[i][j] = dp[i-1][j-1] + 1
                 else:
